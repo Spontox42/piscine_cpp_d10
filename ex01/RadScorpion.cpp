@@ -5,7 +5,7 @@
 ** Login   < petit_x@epitech.net >
 ** 
 ** Started on  Fri Jan 15 12:12:40 2016 petit_x - Marlon Petit
-** Last update Fri Jan 15 13:36:59 2016 Marlon Petit
+** Last update Fri Jan 15 23:56:19 2016 Marlon Petit
 */
 
 #include "RadScorpion.hh"
@@ -22,8 +22,8 @@ RadScorpion::~RadScorpion()
 
 void	RadScorpion::takeDamage(int damage)
 {
-  if (damage >= 0)
-    this->hp_ -= (damage - 0);
-  if (getHP() < 0)
+  if (damage >= this->hp_)
     this->hp_ = 0;
+  else if (damage >= 0)
+    this->hp_ -= damage;
 }
