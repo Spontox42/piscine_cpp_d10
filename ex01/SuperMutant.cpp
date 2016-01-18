@@ -5,7 +5,7 @@
 ** Login   < petit_x@epitech.net >
 ** 
 ** Started on  Fri Jan 15 12:12:40 2016 petit_x - Marlon Petit
-** Last update Fri Jan 15 23:55:32 2016 Marlon Petit
+** Last update Mon Jan 18 12:06:47 2016 Marlon Petit
 */
 
 #include "SuperMutant.hh"
@@ -22,8 +22,6 @@ SuperMutant::~SuperMutant()
 
 void	SuperMutant::takeDamage(int damage)
 {
-  if ((damage + 3) >= this->hp_)
-    this->hp_ = 0;
-  else if (damage >= 3)
+  if (damage >= 3)
     this->hp_ -= (damage - 3);
 }
